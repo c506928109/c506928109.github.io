@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>关键字检索</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/AMap.PlaceSearchRender1120.css"/>
+    <style type="text/css">
+        #panel {
+            position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+        }
+    </style>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=a42aed9a5898bf6a2639a9a921e6e08c"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=a42aed9a5898bf6a2639a9a921e6e08c&plugin=AMap.Driving"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="panel"></div>
+    <div style="position: absolute; z-index: 9999999; padding-left: 4%;">
+        <input id="SearchInput"></input><button id="SearchButton">搜索</button>
+        <table id="SearchResultTable">
+            <tr>
+            <th>关键字</th>    
+            <th>地址</th>
+            <th></th>
+        </table>
+    </div>
+    <div style="position: absolute; z-index: 9999999; float: right; width: auto; right: 0%;">
+        <button id="Draw">绘制路线图</button>
+        <table id="TargetTable">
+            <tr>
+            <th>关键字</th>
+            <th>地址</th>
+            <th></th>
+        </table>
+
+    </div>
+    <script src="MapAPI.js"></script>
+    <script>
+        InitMap()
+        InitToolbar()
+    </script>
+</body>
+</html>
